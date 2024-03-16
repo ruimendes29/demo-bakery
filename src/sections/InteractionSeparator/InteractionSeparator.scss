@@ -1,0 +1,80 @@
+@import '../../variables.scss';
+
+.interaction-separator {
+    height: 60vh;
+    min-height: fit-content;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    img {
+        position: absolute;
+        align-self: center;
+        justify-self: center;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        min-width: 1300px;
+        z-index: -1;
+        filter: brightness(0.5);
+    }
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        h2 {
+            text-align: center;
+            margin-top: 0;
+
+        }
+        p {
+            font-size: 2rem;
+            text-align: center;
+            width: 50%;
+        }
+        .btns-wrapper {
+            display: flex;
+            gap: 2rem;
+            width: 45%;
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-md) and (min-width: $breakpoint-sm) {
+    .btns-wrapper {
+        flex-direction: column;
+    }
+    .content-wrapper {
+        h2 {
+            font-size: 1.8rem;
+        }
+        p {
+            font-size: 1.4rem !important;
+            width: 80%;
+        }
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .btns-wrapper {
+        flex-direction: column;
+        width: 80% !important;
+    }
+    .content-wrapper {
+        h2 {
+            font-size: 1.5rem;
+        }
+        p {
+            font-size: 1.2rem !important;
+            width: 90% !important;
+        }
+    }
+}

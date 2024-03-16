@@ -1,0 +1,48 @@
+@import "../../variables.scss";
+
+.visit-us {
+    background-color: $primary;
+    display: flex;
+    width: 100%;
+    color: white !important;
+    padding-bottom: 100px;
+    img {
+        width: 60%;
+    }
+    .visit-wrapper {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+            text-align: center;
+            font-size: 1.3rem;
+            a {
+                color: white !important;
+                text-decoration: none;
+                &:hover {
+                    text-decoration: underline;
+                    color: darken($primary, 20%) !important;
+                }
+            }
+        }
+        h2 {
+            font-size: 1.8rem;
+            &:first-child {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .visit-us {
+        img {
+            display: none;
+        }
+        .visit-wrapper {
+            width: 100%;
+        }
+    }
+}

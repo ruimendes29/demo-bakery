@@ -1,25 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.scss";
+import Intro from "./sections/Intro/Intro";
+import Menu from "./sections/Menu/Menu";
+import InteractionSeparator from "./sections/InteractionSeparator/InteractionSeparator";
+import DeliciousBaking from "./sections/DeliciousBaking/DeliciousBaking";
+import VisitUs from "./sections/VisitUs/VisitUs";
+import Cart from "./components/Cart/Cart";
+import { Provider } from "react-redux";
+import { store } from "./store/store";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <div className="App">
+        <Intro />
+        <Menu />
+        <InteractionSeparator />
+        <DeliciousBaking />
+        <VisitUs />
+        <Cart />
+      </div>
+    </Provider>
   );
 }
 

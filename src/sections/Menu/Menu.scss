@@ -1,0 +1,91 @@
+@import "../../variables";
+
+.menu {
+    background-color: $primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3rem;
+    h2 {
+        margin-bottom: 0;
+        color: white;
+    }
+    .info {
+        font-style: italic;
+        max-width: 70%;
+        text-align: center;
+    }
+    .whole-menu {
+        color: white;
+        max-width: 700px;
+    }
+    .cards-wrapper {
+        display: grid;
+        gap: 1rem;
+    }
+    .card {
+        width: 300px;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: relative;
+        .add-item {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            width: 30px;
+            aspect-ratio: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1rem;
+            border-radius: 50%;
+            background-color: white;
+            transition: scale 0.3s ease-in-out;
+            cursor: pointer;
+            border: none;
+            &:hover {
+                scale: 1.1;
+            }
+        }
+        img {
+            border-top-left-radius: 1rem;
+            border-top-right-radius: 1rem;
+            height: 200px;
+            width: 100%;
+        }
+        .name {
+            text-transform: uppercase;
+            letter-spacing: 0.1rem;
+            margin-bottom: 0;
+        }
+        .price {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            color: $primary;
+            font-weight: bold;
+        }
+        background-color: white;
+    }
+}
+
+@media (max-width : $breakpoint-sm) {
+    .cards-wrapper {
+        grid-template-columns: 1fr !important;
+    }
+}
+@media (max-width: $breakpoint-md) {
+    .cards-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: $breakpoint-md) {
+    .cards-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

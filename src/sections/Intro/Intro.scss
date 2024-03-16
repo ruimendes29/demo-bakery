@@ -1,0 +1,23 @@
+@import "../../variables.scss";
+
+.intro {
+    display: flex;
+    align-items: center;
+    img {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: $breakpoint-sm) {
+    .intro {
+        img {
+            display: none;
+        }
+        p {
+            font-size: large;
+        }
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+}
+
